@@ -1,0 +1,1 @@
+﻿1. playerLogout handler - killing game, sending proper game state

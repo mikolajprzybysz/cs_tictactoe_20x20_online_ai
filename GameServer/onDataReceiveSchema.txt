@@ -1,0 +1,144 @@
+﻿public void OnRecievedData( IAsyncResult ar ){
+	SocketClient client = (SocketClient)ar.AsyncState;
+	byte [] aryRet = client.GetRecievedData( ar );
+	// If no data was recieved then the connection is probably dead
+	if( aryRet.Length < 1 )
+	{
+		Console.WriteLine( "Client {0}, disconnected", client.getSocket.RemoteEndPoint );
+		client.getSocket.Close();
+		m_aryClients.Remove( client );      				
+		return;
+	}
+    String str = Encoding.ASCII.GetString(aryRet, 0, aryRet.Length);
+            
+	switch(message type){
+	case playerLogin:
+		/*
+		<message type="playerLogin">
+		<playerLogin nick="[string]" gameType="[string]"/>
+		</message>
+		*/
+		if(logId=checkLogin()==0){
+			send loginResponse
+			/*
+			<message type="loginResponse">
+			<response accept="yes"/>
+			</message>
+			*/
+		}else{
+			send loginResponse
+			/*
+			Error ids:
+			1 - wrong nick
+			2 - improper game type
+			3 - players pool overflow
+			
+			<message type="loginResponse">
+			<response accept="no"/>
+			<error id="[int]"/>
+			</message>
+			*/
+		}
+	break;
+	
+	case gameMasterLogin:
+		/*
+		<message type="gameMasterLogin">
+		<gameMasterLogin id="[string]" gameType="[string]" playersMin="[int>1]" playersMax="[int>=playersMin]" />
+		</message>
+		*/
+		
+		if(logId=checkLogin()==0){
+			send loginResponse
+			/*
+			<message type="loginResponse">
+			<response accept="yes"/>
+			</message>
+			*/
+		}else{
+			send loginResponse
+			/*
+			Error ids:
+			1 - wrong nick
+			2 - improper game type
+			3 - players pool overflow
+			
+			<message type="loginResponse">
+			<response accept="no"/>
+			<error id="[int]"/>
+			</message>
+			*/
+	break;
+	
+	case gameState:
+		/*
+		<message type="gameState">
+		<gameId id="[string]"/>
+		<!-- one tag of the two below appears in message -->
+		<nextPlayer nick="[string]"/>
+		<gameOver>
+		<!-- this tag appears repeatedly for all the players -->
+		<player nick="[string]" result="loser/winner"/>
+		</gameOver>
+		<!-- this tag will always appear. Not read by the server.-->
+		<gameState>
+		<!--this tag contains game-specific information in XML format-->
+		</gameState>
+		</message>
+		*/
+		resend to all clients in the game (found by gameId)
+	break;
+	
+	case move:
+		/*
+		<message type="move">
+		<gameId id="[string]"/>
+		<!-- not read by server -->
+		<move>
+		<!--
+		this tag contains rule-specific information in XML format
+		-->
+		</move>
+		</message>
+		*/
+		send to proper GameMaster specified by gameId
+	break;
+	
+	case leaveGame:
+		/*
+		<!--"leaving game" request message sent by player to server-->
+		<message type="leaveGame">
+		<gameId id="[string]"/>
+		</message>
+		*/
+
+		Console.WriteLine( "Send to client {0} failed", client.getSocket.RemoteEndPoint );
+		clientSend.getSocket.Close();
+		m_aryClients.Remove( client );
+		send playerLeftGame to Game Master
+
+		/*
+		<message type="playerLeftGame">
+		<player nick="[string]"/>
+		<gameId id="[string]"/>
+		</message>
+		*/
+		
+	break;
+	
+	case logout:
+		<message type="logout"/>
+		logout client (do we need to send response to this message?)
+	break;
+	
+	case error:
+		/*
+		<message type="error">
+		[String with error message]
+		</message>
+		Error handling routine
+		*/
+	break;
+	
+}
+}

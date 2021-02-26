@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
+  
+  <xs:element name="message">
+    <xs:complexType mixed="true">      
+      <xs:sequence>
+          
+          <xs:element name="playerLogin" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+              <xs:attribute name="nick" type="xs:string" />
+              <xs:attribute name="gameType" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+        
+          <xs:element name="gameMasterLogin" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+             <xs:attribute name="id" type="xs:string" />
+             <xs:attribute name="gameType" type="xs:string" />
+             <xs:attribute name="playersMin" type="xs:int" />
+             <xs:attribute name="playersMax" type="xs:int" />
+            </xs:complexType>
+          </xs:element>
+
+          <xs:element name="player" minOccurs="0" maxOccurs="unbounded">
+            <xs:complexType>
+              <xs:attribute name="nick" type="xs:string" use="required" />
+              <xs:attribute name="win" type="xs:int" use="optional" />
+              <xs:attribute name="lost" type="xs:int" use="optional" />
+            </xs:complexType>
+          </xs:element>
+        
+          <xs:element name="response" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+              <xs:attribute name="accept" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+
+          <xs:element name="error" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+              <xs:attribute name="id" type="xs:int" use="required" />
+            </xs:complexType>
+          </xs:element>
+
+          <xs:element name="gameId">
+            <xs:complexType>
+              <xs:attribute name="id" type="xs:string" use="required" />
+            </xs:complexType>         
+          </xs:element>
+        
+          <xs:element name="nextPlayer" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+              <xs:attribute name="nick" type="xs:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+        
+          <xs:element name="gameOver" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="player" minOccurs="0" maxOccurs="unbounded">
+                  <xs:complexType>
+                    <xs:attribute name="nick" type="xs:string" use="required" />
+                    <xs:attribute name="result" type="xs:string" use="optional" />
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <!-- in gameState there should be only tac  -->
+          <xs:element name="gameState" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="tic" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                      <xs:attribute name="x" type="xs:int" use="required" />
+                      <xs:attribute name="y" type="xs:int" use="required" />
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="tac" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                      <xs:attribute name="x" type="xs:int" use="required" />
+                      <xs:attribute name="y" type="xs:int" use="required" />
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        <!-- in move there should be only tic  -->
+        <xs:element name="move" minOccurs="0" maxOccurs="1">
+          <xs:complexType>           
+              <xs:sequence>
+                <xs:element name="tic" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                    <xs:attribute name="x" type="xs:int" use="required" />
+                    <xs:attribute name="y" type="xs:int" use="required" />
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="tac" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                    <xs:attribute name="x" type="xs:int" use="required" />
+                    <xs:attribute name="y" type="xs:int" use="required" />
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        
+      </xs:sequence>
+          
+          
+      <xs:attribute name="type" type="xs:string" />
+    </xs:complexType>
+    
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="message" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

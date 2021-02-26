@@ -1,0 +1,9 @@
+D:\Workspace\VisualStudio\C#\Project\bin\Debug\NLog.config
+D:\Workspace\VisualStudio\C#\Project\bin\Debug\GameMaster.exe
+D:\Workspace\VisualStudio\C#\Project\bin\Debug\GameMaster.pdb
+D:\Workspace\VisualStudio\C#\Project\10-en-04(14)\GameMaster\obj\Debug\ResolveAssemblyReference.cache
+D:\Workspace\VisualStudio\C#\Project\10-en-04(14)\GameMaster\obj\Debug\GameMaster.GameMaster.resources
+D:\Workspace\VisualStudio\C#\Project\10-en-04(14)\GameMaster\obj\Debug\GameMaster.Properties.Resources.resources
+D:\Workspace\VisualStudio\C#\Project\10-en-04(14)\GameMaster\obj\Debug\GameMaster.csproj.GenerateResource.Cache
+D:\Workspace\VisualStudio\C#\Project\10-en-04(14)\GameMaster\obj\Debug\GameMaster.exe
+D:\Workspace\VisualStudio\C#\Project\10-en-04(14)\GameMaster\obj\Debug\GameMaster.pdb

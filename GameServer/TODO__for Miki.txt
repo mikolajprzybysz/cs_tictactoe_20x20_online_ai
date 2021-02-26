@@ -1,0 +1,18 @@
+﻿Tam gdzie masz takie regiony #region Combining clients in pairs
+wywoływana jest funkcja dobierająca graczy do gry w championship albo w zwykłej grze.
+Dla zwykłej gry działa.
+Dla championshipa się wiesza. Zdaje się że wchodzi do pętli "do while" w funkcji private void initChampionship()
+i wykonuje ją w nieskończoność.
+Możliwe że są jakieś problemy z synchronizacją (synchronizacja jest zrobiona za pomocą słowa kluczowego "lock").
+
+Kto z kim grał bądź nie grał jest trzymane w zmiennej "table" typu bool [,]. True w tej tablicy oznacza że gra się odbywa,
+bądź odbyła. False że nie było takiej gry rozegranej. Indexy tej tablicy to z założenia indexy playerów.
+W tamtej funkcji otrzymuje je w tych dówch liniach:
+
+index1 = m_aryClients.ToList().IndexOf(kvp);
+index2 = m_aryClients.ToList().IndexOf(new KeyValuePair<SocketClient, string>(sck, m_aryClients[sck]));
+
+Jeśli wszystkie gry zostaną rozegrane to powinnien messageBox wyskoczyć.
+
+Jakbyś miał jakieś pytania to dzwoń lub pisz na gg.
+

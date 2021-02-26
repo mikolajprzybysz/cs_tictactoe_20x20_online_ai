@@ -1,0 +1,8 @@
+D:\Workspace\VisualStudio\C#\Project\bin\Debug\ProtocolParser.exe
+D:\Workspace\VisualStudio\C#\Project\bin\Debug\ProtocolParser.pdb
+D:\Workspace\VisualStudio\C#\Project\10-en-04(14)\ProtocolParser\obj\Debug\ResolveAssemblyReference.cache
+D:\Workspace\VisualStudio\C#\Project\10-en-04(14)\ProtocolParser\obj\Debug\ProtocolParser.Form1.resources
+D:\Workspace\VisualStudio\C#\Project\10-en-04(14)\ProtocolParser\obj\Debug\ProtocolParser.Properties.Resources.resources
+D:\Workspace\VisualStudio\C#\Project\10-en-04(14)\ProtocolParser\obj\Debug\ProtocolParser.csproj.GenerateResource.Cache
+D:\Workspace\VisualStudio\C#\Project\10-en-04(14)\ProtocolParser\obj\Debug\ProtocolParser.exe
+D:\Workspace\VisualStudio\C#\Project\10-en-04(14)\ProtocolParser\obj\Debug\ProtocolParser.pdb

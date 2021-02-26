@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<protocol
+  >
+  
+  
+  <message      type ="playerLogin">
+    
+    
+    
+    
+    <playerLogin     nick="Piotrek" gameType="chess"/>
+    
+    
+    
+    
+    
+  </message>             
+  <message type ="playerLogin"        >
+    <playerLogin nick="Łukasz"              gameType="warcaby"/>
+    
+    
+    
+    
+  </message>
+</protocol>

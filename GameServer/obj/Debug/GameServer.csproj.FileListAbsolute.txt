@@ -1,0 +1,9 @@
+D:\Workspace\VisualStudio\C#\Project\bin\Debug\NLog.config
+D:\Workspace\VisualStudio\C#\Project\bin\Debug\GameServer.exe
+D:\Workspace\VisualStudio\C#\Project\bin\Debug\GameServer.pdb
+D:\Workspace\VisualStudio\C#\Project\10-en-04(14)\GameServer\obj\Debug\ResolveAssemblyReference.cache
+D:\Workspace\VisualStudio\C#\Project\10-en-04(14)\GameServer\obj\Debug\GameServer.GameServer.resources
+D:\Workspace\VisualStudio\C#\Project\10-en-04(14)\GameServer\obj\Debug\GameServer.Properties.Resources.resources
+D:\Workspace\VisualStudio\C#\Project\10-en-04(14)\GameServer\obj\Debug\GameServer.csproj.GenerateResource.Cache
+D:\Workspace\VisualStudio\C#\Project\10-en-04(14)\GameServer\obj\Debug\GameServer.exe
+D:\Workspace\VisualStudio\C#\Project\10-en-04(14)\GameServer\obj\Debug\GameServer.pdb
