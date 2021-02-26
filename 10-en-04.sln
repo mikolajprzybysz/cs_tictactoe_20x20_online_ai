@@ -1,0 +1,74 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{80F125FC-C419-4743-B8BD-F517A671545C}"
+	ProjectSection(SolutionItems) = preProject
+		TODO.txt = TODO.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameServer", "GameServer\GameServer.csproj", "{A775F924-D962-407F-9CC2-85F573A62A0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameMaster", "GameMaster\GameMaster.csproj", "{1A9351D3-F124-4A6A-AB20-9ADAFC9AD298}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameClient", "GameClient\GameClient.csproj", "{319D65EE-3DBB-4849-A418-3F2C6A7A1CB4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C7A82484-E37E-4449-845C-17A8B48A4A71}"
+	ProjectSection(SolutionItems) = preProject
+		protocol.xsd = protocol.xsd
+		..\res\ugs-protocol-01-xsd.xsd = ..\res\ugs-protocol-01-xsd.xsd
+		..\res\ugs-protocol-01.xml = ..\res\ugs-protocol-01.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtocolParser", "ProtocolParser\ProtocolParser.csproj", "{E3A00705-0BD1-45A7-B679-0F26D2CD02C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionUtils", "test\ConnectionUtils.csproj", "{B1043EF7-3D8E-478A-9C6B-14EAA72B7D41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{01616046-CDDD-4BF0-8637-0109F7D45A8F}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A775F924-D962-407F-9CC2-85F573A62A0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A775F924-D962-407F-9CC2-85F573A62A0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A775F924-D962-407F-9CC2-85F573A62A0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A775F924-D962-407F-9CC2-85F573A62A0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A9351D3-F124-4A6A-AB20-9ADAFC9AD298}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A9351D3-F124-4A6A-AB20-9ADAFC9AD298}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A9351D3-F124-4A6A-AB20-9ADAFC9AD298}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A9351D3-F124-4A6A-AB20-9ADAFC9AD298}.Release|Any CPU.Build.0 = Release|Any CPU
+		{319D65EE-3DBB-4849-A418-3F2C6A7A1CB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{319D65EE-3DBB-4849-A418-3F2C6A7A1CB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{319D65EE-3DBB-4849-A418-3F2C6A7A1CB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{319D65EE-3DBB-4849-A418-3F2C6A7A1CB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3A00705-0BD1-45A7-B679-0F26D2CD02C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3A00705-0BD1-45A7-B679-0F26D2CD02C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3A00705-0BD1-45A7-B679-0F26D2CD02C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3A00705-0BD1-45A7-B679-0F26D2CD02C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1043EF7-3D8E-478A-9C6B-14EAA72B7D41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1043EF7-3D8E-478A-9C6B-14EAA72B7D41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1043EF7-3D8E-478A-9C6B-14EAA72B7D41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1043EF7-3D8E-478A-9C6B-14EAA72B7D41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01616046-CDDD-4BF0-8637-0109F7D45A8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01616046-CDDD-4BF0-8637-0109F7D45A8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01616046-CDDD-4BF0-8637-0109F7D45A8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01616046-CDDD-4BF0-8637-0109F7D45A8F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A775F924-D962-407F-9CC2-85F573A62A0A} = {80F125FC-C419-4743-B8BD-F517A671545C}
+		{1A9351D3-F124-4A6A-AB20-9ADAFC9AD298} = {80F125FC-C419-4743-B8BD-F517A671545C}
+		{319D65EE-3DBB-4849-A418-3F2C6A7A1CB4} = {80F125FC-C419-4743-B8BD-F517A671545C}
+		{E3A00705-0BD1-45A7-B679-0F26D2CD02C5} = {80F125FC-C419-4743-B8BD-F517A671545C}
+		{B1043EF7-3D8E-478A-9C6B-14EAA72B7D41} = {80F125FC-C419-4743-B8BD-F517A671545C}
+		{01616046-CDDD-4BF0-8637-0109F7D45A8F} = {80F125FC-C419-4743-B8BD-F517A671545C}
+	EndGlobalSection
+EndGlobal

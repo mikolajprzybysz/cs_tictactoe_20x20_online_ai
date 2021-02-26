@@ -1,0 +1,7 @@
+D:\Workspace\VisualStudio\C#\Project\10-en-04(14)\Utils\bin\Debug\NLog.config
+D:\Workspace\VisualStudio\C#\Project\10-en-04(14)\Utils\bin\Debug\Utils.dll
+D:\Workspace\VisualStudio\C#\Project\10-en-04(14)\Utils\bin\Debug\Utils.pdb
+D:\Workspace\VisualStudio\C#\Project\10-en-04(14)\Utils\bin\Debug\NLog.dll
+D:\Workspace\VisualStudio\C#\Project\10-en-04(14)\Utils\obj\Debug\ResolveAssemblyReference.cache
+D:\Workspace\VisualStudio\C#\Project\10-en-04(14)\Utils\obj\Debug\Utils.dll
+D:\Workspace\VisualStudio\C#\Project\10-en-04(14)\Utils\obj\Debug\Utils.pdb

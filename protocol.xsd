@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="urn:dox-schema" elementFormDefault="qualified" targetNamespace="urn:dox-schema">
+
+  <xs:attribute name="type" type="xs:string"/>
+
+  <xs:element name="message">
+    <xs:complexType>
+      <xs:attribute ref="type" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="type">
+    <xs:sequence>
+      <xs:element name="playerLogin" type="playerLoginType"/>
+    <!--
+      <xs:element name="gameMasterLogin" type="gameMasterLoginType"/>
+      <xs:element name="loginResponse" type="loginResponseType"/>
+      <xs:element name="beginGame" type="beginGameType"/>
+      <xs:element name="gameState" type="gameStateType"/>
+      <xs:element name="move" type="moveType"/>
+      <xs:element name="leaveGame" type="leaveGameType"/>
+      <xs:element name="playerLeftGame" type="playerLeftGameType"/>
+      <xs:element name="logout"/>
+      <xs:element name="serverShutdown"/>
+      <xs:element name="championsList" type="championsListType"/>
+      -->
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="playerLoginType">
+    <xs:attribute name="nick" type="xs:string"/>
+    <xs:attribute name="gameType" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="gameMasterLoginType">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string"/>
+      <xs:element name="gameType" type="xs:string"/>
+      <xs:element name="playersMin" type="xs:int" minOccurs="1"/>
+      <xs:element name="playersMax" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="loginResponseType">
+    <xs:sequence>
+      <xs:element name="response" type="responseType" />
+      <xs:element name="error" type="errorType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="responseType">
+    <xs:sequence>
+      <xs:element name="accept" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="errorType">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="beginGameType">
+    <xs:sequence>
+      <xs:element name="gameId" type="gameIdType" />
+      <xs:element name="player" type="playerType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="gameIdType">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="playerType">
+    <xs:sequence>
+      <xs:element name="player" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  
+</xs:schema>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="message">
+    <xs:complexType mixed="true">
+      <xs:sequence minOccurs="0">
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="gameId">
+            <xs:complexType>
+              <xs:attribute name="id" type="xs:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="move" type="xs:string" />
+          <xs:element name="nextPlayer">
+            <xs:complexType>
+              <xs:attribute name="nick" type="xs:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="gameOver">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="player">
+                  <xs:complexType>
+                    <xs:attribute name="nick" type="xs:string" use="required" />
+                    <xs:attribute name="result" type="xs:string" use="required" />
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="gameState" type="xs:string" />
+          <xs:element name="player">
+            <xs:complexType>
+              <xs:attribute name="nick" type="xs:string" use="required" />
+              <xs:attribute name="won" type="xs:string" use="optional" />
+              <xs:attribute name="lost" type="xs:string" use="optional" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="response">
+            <xs:complexType>
+              <xs:attribute name="accept" type="xs:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="error">
+            <xs:complexType>
+              <xs:attribute name="id" type="xs:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="gameMasterLogin">
+            <xs:complexType>
+              <xs:attribute name="id" type="xs:string" use="required" />
+              <xs:attribute name="gameType" type="xs:string" use="required" />
+              <xs:attribute name="playersMin" type="xs:string" use="required" />
+              <xs:attribute name="playersMax" type="xs:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="playerLogin">
+            <xs:complexType>
+              <xs:attribute name="nick" type="xs:string" use="required" />
+              <xs:attribute name="gameType" type="xs:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="type" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
